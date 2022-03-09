@@ -10,7 +10,7 @@ public class Employee {
 		super();
 	}
 
-	public Employee(String firstName, double salary) {
+	public Employee(String firstName, double salary) { 
 		super();
 		this.firstName = firstName;
 		this.salary = salary;
