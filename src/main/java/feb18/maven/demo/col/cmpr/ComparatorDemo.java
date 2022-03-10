@@ -16,14 +16,19 @@ public class ComparatorDemo {
 		System.out.println("Initial empList");
 		empList.forEach(e -> System.out.println(e.toString()));
 
-		EmployeeComparator comparator = new EmployeeComparator();
-
-//		Collections.sort(empList);
-		Collections.sort(empList, comparator);
-
-		System.out.println("after sorting empList");
+		System.out.println("after sorting empList by eid");
+		EmpSalaryComparator cmp1 = new EmpSalaryComparator();
+		Collections.sort(empList, cmp1);
 		empList.forEach(e -> System.out.println(e.toString()));
 
+		System.out.println("after sorting empList by firstName");
+		EmpFirstNameComparator cmp2 = new EmpFirstNameComparator();
+		Collections.sort(empList, cmp2);
+		empList.forEach(e -> System.out.println(e.toString()));
+		System.out.println("after sorting empList by salary");
+		EmpSalaryComparator cmp3 = new EmpSalaryComparator();
+		Collections.sort(empList, cmp3);
+		empList.forEach(e -> System.out.println(e.toString()));
 	}
 
 }
