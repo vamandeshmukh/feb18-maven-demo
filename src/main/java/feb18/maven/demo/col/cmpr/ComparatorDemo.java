@@ -1,9 +1,9 @@
-package feb18.maven.demo.col;
+package feb18.maven.demo.col.cmpr;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ComparableDemo {
+public class ComparatorDemo {
 
 	public static void main(String[] args) {
 
@@ -16,10 +16,14 @@ public class ComparableDemo {
 		System.out.println("Initial empList");
 		empList.forEach(e -> System.out.println(e.toString()));
 
-		Collections.sort(empList);
+		EmployeeComparator comparator = new EmployeeComparator();
+
+//		Collections.sort(empList);
+		Collections.sort(empList, comparator);
 
 		System.out.println("after sorting empList");
 		empList.forEach(e -> System.out.println(e.toString()));
+
 	}
 
 }
