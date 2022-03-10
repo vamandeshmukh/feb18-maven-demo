@@ -16,7 +16,7 @@ public class ComparableDemo {
 		System.out.println("Initial empList");
 		empList.forEach(e -> System.out.println(e.toString()));
 
-		Collections.sort(empList);
+//		Collections.sort(empList);
 
 		System.out.println("after sorting empList");
 		empList.forEach(e -> System.out.println(e.toString()));
