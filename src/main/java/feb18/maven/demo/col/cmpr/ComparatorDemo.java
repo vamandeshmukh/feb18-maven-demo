@@ -25,6 +25,7 @@ public class ComparatorDemo {
 		EmpFirstNameComparator cmp2 = new EmpFirstNameComparator();
 		Collections.sort(empList, cmp2);
 		empList.forEach(e -> System.out.println(e.toString()));
+
 		System.out.println("after sorting empList by salary");
 		EmpSalaryComparator cmp3 = new EmpSalaryComparator();
 		Collections.sort(empList, cmp3);

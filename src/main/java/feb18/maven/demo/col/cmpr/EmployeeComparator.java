@@ -2,15 +2,6 @@ package feb18.maven.demo.col.cmpr;
 
 import java.util.Comparator;
 
-public class EmployeeComparator implements Comparator<Employee> {
-
-	@Override
-	public int compare(Employee o1, Employee o2) {
-		return o1.getEid() - o2.getEid();
-	}
-
-}
-
 class EmpEidComparator implements Comparator<Employee> {
 
 	@Override
@@ -24,7 +15,7 @@ class EmpSalaryComparator implements Comparator<Employee> {
 
 	@Override
 	public int compare(Employee o1, Employee o2) {
-		return Double.compare(o1.getEid(), o2.getEid());
+		return Double.compare(o1.getSalary(), o2.getSalary());
 	}
 
 }
