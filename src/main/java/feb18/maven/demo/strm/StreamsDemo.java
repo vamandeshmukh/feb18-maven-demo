@@ -2,6 +2,7 @@ package feb18.maven.demo.strm;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -48,9 +49,28 @@ public class StreamsDemo {
 		System.out.println(nameInUpperCase);
 
 		System.out.println("\nUsing map() to change case");
-		List<String> nameInUpperCase2 = empList.stream().map(emp -> emp.getFirstName().toUpperCase())
-				.collect((Collectors.toList()));
+//		List<String> nameInUpperCase2 = empList.stream().map(emp -> emp.getFirstName().toUpperCase())
+//				.collect((Collectors.toList()));
+
+		List<String> nameInUpperCase2 = empList.stream().map(emp -> {
+			return emp.getFirstName().toUpperCase();
+		}).collect((Collectors.toList()));
+
 		nameInUpperCase2.forEach(emp -> System.out.println(emp.toString()));
+
+		System.out.println("\nUsing map() to change emp data");
+		List<Employee> updatedEmps = empList.stream().map((e) -> {
+			e.setFirstName(e.getFirstName().toUpperCase());
+			e.setSalary(e.getSalary() * 2);
+			return e;
+		}).collect((Collectors.toList()));
+
+		updatedEmps.forEach(e -> System.out.println(e.toString()));
+
+//		List<Employee> updatedEmps = empList.stream().map((e) -> {
+//			e.setFirstName(e.getFirstName().toUpperCase());
+//			e.setSalary(e.getSalary() * 2);
+//		}).collect((Collectors.toList()));
 
 	}
 }
