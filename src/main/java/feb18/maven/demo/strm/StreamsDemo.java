@@ -9,8 +9,6 @@ public class StreamsDemo {
 
 	public static void main(String[] args) {
 
-		Employee emp = new Employee();
-
 		List<Employee> empList = new ArrayList<>();
 		empList.add(new Employee(101, "Sonu", 50000));
 		empList.add(new Employee(102, "Monu", 60000));
@@ -31,7 +29,7 @@ public class StreamsDemo {
 //		List<Employee> empWithHigherSal = empList.stream().filter(e -> e.getSalary() >= 60000)
 //				.collect(Collectors.toList());
 //		empWithHigherSal.forEach(e -> System.out.println(e.toString()));
- 
+
 		empList.stream().filter(e -> e.getSalary() >= 60000).collect(Collectors.toList())
 				.forEach(e -> System.out.println(e.toString()));
 
@@ -48,6 +46,11 @@ public class StreamsDemo {
 		List<Employee> nameInUpperCase = empList.stream().map(emp2 -> emp2 = null).collect((Collectors.toList()));
 
 		System.out.println(nameInUpperCase);
+
+		System.out.println("\nUsing map() to change case");
+		List<String> nameInUpperCase2 = empList.stream().map(emp -> emp.getFirstName().toUpperCase())
+				.collect((Collectors.toList()));
+		nameInUpperCase2.forEach(emp -> System.out.println(emp.toString()));
 
 	}
 }
