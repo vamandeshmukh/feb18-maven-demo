@@ -31,7 +31,7 @@ public class StreamsDemo {
 //		List<Employee> empWithHigherSal = empList.stream().filter(e -> e.getSalary() >= 60000)
 //				.collect(Collectors.toList());
 //		empWithHigherSal.forEach(e -> System.out.println(e.toString()));
-
+ 
 		empList.stream().filter(e -> e.getSalary() >= 60000).collect(Collectors.toList())
 				.forEach(e -> System.out.println(e.toString()));
 
