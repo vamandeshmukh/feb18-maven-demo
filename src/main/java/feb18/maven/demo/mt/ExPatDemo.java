@@ -2,7 +2,6 @@ package feb18.maven.demo.mt;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 
 public class ExPatDemo implements Runnable {
 
