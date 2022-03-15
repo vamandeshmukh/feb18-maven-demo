@@ -33,6 +33,23 @@ rollback;
 -- DML - INSERT, UPDATE, DELETE 
 -- DQL / DRL - SELECT
 
+-- PostgreSQL, Oracle, MySQL, SQL Server, DB2, MariaDB, H2, Derby... 
+
+create table emp2(eid INT, first_name varchar(10), salary decimal);
+
+select * from emp2;
+
+insert into emp2 (eid, first_name, salary) values (101, 'Sonu', 50000);
+insert into emp2 (eid, first_name, salary) values (102, 'Monu', 60000);
+insert into emp2 (eid, first_name, salary) values (103, 'Tonu', 55000);
+insert into emp2 (eid, first_name, salary) values (104, 'Ponu', 40000);
+insert into emp2 (eid, first_name, salary) values (105, 'Gonu', 65000);
+
+commit; 
+
+SELECT * FROM emp2 WHERE salary > 50000;
+SELECT * FROM emp2 WHERE salary > 70000;
+
 
 
 
