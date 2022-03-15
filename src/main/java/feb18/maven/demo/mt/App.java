@@ -5,7 +5,7 @@ package feb18.maven.demo.mt;
 public class App implements Runnable {
 
 	public void printNums() {
-		Thread.currentThread().setPriority(9);
+//		Thread.currentThread().setPriority(9);
 		System.out.println(Thread.currentThread().getPriority());
 		for (int i = 1; i <= 10; i++) {
 			System.out.println(i + " - " + Thread.currentThread().getName());
@@ -25,6 +25,7 @@ public class App implements Runnable {
 	public static void main(String[] args) {
 
 		Thread app = new Thread(new App());
+		app.setPriority(9);
 		app.start();
 //		try {
 //			app.join();
@@ -32,8 +33,10 @@ public class App implements Runnable {
 //			e.printStackTrace();
 //		}
 		Thread app2 = new Thread(new App());
+		app2.setPriority(3);
 		app2.start();
 		Thread app3 = new Thread(new App());
+		app3.setPriority(6);
 		app3.start();
 
 	}
