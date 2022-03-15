@@ -1,12 +1,14 @@
 package feb18.maven.demo.mt;
 
-// multi-threading with Thread class 
+//multi-threading with Runnable interface
 
-public class App extends Thread {
+public class App implements Runnable {
 
 	public void printNums() {
+		Thread.currentThread().setPriority(9);
+		System.out.println(Thread.currentThread().getPriority());
 		for (int i = 1; i <= 10; i++) {
-			System.out.println(i);
+			System.out.println(i + " - " + Thread.currentThread().getName());
 			try {
 				Thread.sleep(250);
 			} catch (InterruptedException e) {
@@ -22,18 +24,55 @@ public class App extends Thread {
 
 	public static void main(String[] args) {
 
-		App app = new App();
+		Thread app = new Thread(new App());
 		app.start();
-		App app2 = new App();
+//		try {
+//			app.join();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+		Thread app2 = new Thread(new App());
 		app2.start();
-		App app3 = new App();
+		Thread app3 = new Thread(new App());
 		app3.start();
 
 	}
 }
 
-// normal single threaded app 
+//// multi-threading with Thread class 
+//
+//public class App extends Thread {
+//
+//	public void printNums() {
+//		for (int i = 1; i <= 10; i++) {
+//			System.out.println(i);
+//			try {
+//				Thread.sleep(250);
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+//
+//	@Override
+//	public void run() {
+//		this.printNums();
+//	}
+//
+//	public static void main(String[] args) {
+//
+//		App app = new App();
+//		app.start();
+//		App app2 = new App();
+//		app2.start();
+//		App app3 = new App();
+//		app3.start();
+//
+//	}
+//}
 
+//// normal single threaded app 
+//
 //public class App {
 //
 //	public void printNums() {
