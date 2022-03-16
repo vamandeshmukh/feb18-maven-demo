@@ -92,4 +92,19 @@ CREATE TABLE emp(
 SELECT * FROM emp; 
 
 INSERT INTO dep (did, dname, city) VALUES (10, 'HR', 'Hyderabad');
+INSERT INTO dep (did, dname, city) VALUES (20, 'Admin', 'Chennai');
+INSERT INTO dep (did, dname, city) VALUES (30, 'Sales', 'Pune');
+INSERT INTO dep (did, dname, city) VALUES (40, 'Mgmnt', 'Bengaluru');
+commit; 
 
+SELECT * FROM dep; 
+
+INSERT INTO emp (eid, ename, salary, did) VALUES (101, 'Sonu', 50000, 10);
+INSERT INTO emp (eid, ename, salary, did) VALUES (102, 'Monu', 60000, 20);
+INSERT INTO emp (eid, ename, salary, did) VALUES (103, 'Tonu', 55000, 20);
+INSERT INTO emp (eid, ename, salary, did) VALUES (104, 'Gonu', 65000, 30);
+INSERT INTO emp (eid, ename, salary, did) VALUES (105, 'Ponu', 40000, null);
+commit; 
+
+SELECT * FROM emp; 
+SELECT * FROM dep; 
