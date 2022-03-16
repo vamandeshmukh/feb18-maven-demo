@@ -132,5 +132,30 @@ JOIN dep d
 ON e.did = d.did
 WHERE e.ename = 'Sonu'; 
 
+SELECT * FROM emp;
+SELECT * FROM dep;
 
+-- types of join - 
+-- 1. inner join - only matching records 
+-- outer joins 
+-- 2. left outer join -  matching records from both tables and non-matching records from left table  
+-- 2. right outer join -  matching records from both tables and non-matching records from right table  
+-- 3. full outer join -  matching and non-mathcing records from both tables 
 
+-- 2. left outer join -
+SELECT * 
+FROM emp e
+LEFT JOIN dep d
+ON e.did = d.did;
+
+-- 3. right outer join -
+SELECT * 
+FROM emp e
+RIGHT JOIN dep d
+ON e.did = d.did;
+
+-- 4. full outer join -
+SELECT * 
+FROM emp e
+FULL JOIN dep d
+ON e.did = d.did;
