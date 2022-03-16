@@ -108,3 +108,9 @@ commit;
 
 SELECT * FROM emp; 
 SELECT * FROM dep; 
+
+-- error 
+-- INSERT INTO emp (eid, ename, salary, did) VALUES (106, 'Ponu', 40000, 50);
+-- INSERT INTO emp (eid, ename, salary, did) VALUES (101, 'Ponu', 40000, 10);
+-- INSERT INTO emp (eid, ename, salary, did) VALUES (null, 'Ponu', 40000, 50);
+
