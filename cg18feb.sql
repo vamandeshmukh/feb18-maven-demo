@@ -114,3 +114,23 @@ SELECT * FROM dep;
 -- INSERT INTO emp (eid, ename, salary, did) VALUES (101, 'Ponu', 40000, 10);
 -- INSERT INTO emp (eid, ename, salary, did) VALUES (null, 'Ponu', 40000, 50);
 
+-- In which city does Sonu work? 
+-- not workable 
+-- SELECT ename, city FROM emp, dep WHERE ename = 'Sonu'; 
+
+-- JOINS - fetch data from mutiple tables 
+
+-- SELECT ename, city 
+-- FROM emp
+-- JOIN dep 
+-- ON emp.did = dep.did
+-- WHERE ename = 'Sonu'; 
+
+SELECT e.ename, d.city 
+FROM emp e
+JOIN dep d
+ON e.did = d.did
+WHERE e.ename = 'Sonu'; 
+
+
+
