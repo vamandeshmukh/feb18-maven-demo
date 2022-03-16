@@ -159,3 +159,14 @@ SELECT *
 FROM emp e
 FULL JOIN dep d
 ON e.did = d.did;
+
+
+SELECT * FROM emp;
+
+-- Which employee has the highest salary?
+
+-- subquery 
+SELECT ename, salary FROM emp WHERE salary = 
+(SELECT max(salary) FROM emp);
+
+
