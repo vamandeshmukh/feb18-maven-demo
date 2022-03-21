@@ -12,7 +12,8 @@ public class JpaDemo {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistenceUnitName");
 		EntityManager em = factory.createEntityManager();
 
-		Employee emp = new Employee(101, "Sonu", 50000);
+//		Employee emp = new Employee(101, "Sonu", 50000);
+		Employee emp = new Employee(102, "Monu", 60000);
 
 		em.getTransaction().begin();
 
@@ -20,8 +21,8 @@ public class JpaDemo {
 //		em.merge(emp); // update
 //		em.remove(emp); // delete
 		Employee emp2 = em.find(Employee.class, 101); // select
+		em.getTransaction().commit();
 		System.out.println(emp2.toString());
 		System.out.println("End");
-		em.getTransaction().commit();
 	}
 }
