@@ -203,5 +203,10 @@ commit;
 
 select * from emp_table;
 
--- drop table emp_table;
+drop table emp_table;
+
+CREATE TABLE emp_table(
+	employee_id INT CONSTRAINT emp_table_pk PRIMARY KEY, 
+	first_name VARCHAR(10), 
+	salary DECIMAL);
 
