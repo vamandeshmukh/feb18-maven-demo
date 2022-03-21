@@ -10,9 +10,8 @@ public class JpaDemo {
 		System.out.println("Start");
 
 		EmployeeDao dao = new EmployeeDao();
-		Employee emp = new Employee(105, "Ponu", 75000);
-
-		dao.addEmployee(emp);
+//		Employee emp = new Employee(105, "Ponu", 75000);
+//		dao.addEmployee(emp);
 		System.out.println(dao.getEmployeeById(105));
 
 		System.out.println("End");
