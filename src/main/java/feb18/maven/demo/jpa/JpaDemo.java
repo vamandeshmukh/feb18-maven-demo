@@ -8,6 +8,7 @@ public class JpaDemo {
 
 	public static void main(String[] args) {
 
+		System.out.println("Start");
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistenceUnitName");
 		EntityManager em = factory.createEntityManager();
 
@@ -20,9 +21,7 @@ public class JpaDemo {
 //		em.remove(emp); // delete
 		Employee emp2 = em.find(Employee.class, 101); // select
 		System.out.println(emp2.toString());
-
+		System.out.println("End");
 		em.getTransaction().commit();
-
 	}
-
 }
