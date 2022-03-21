@@ -169,4 +169,25 @@ SELECT * FROM emp;
 SELECT ename, salary FROM emp WHERE salary = 
 (SELECT max(salary) FROM emp);
 
+SELECT * FROM emp;
+SELECT * FROM emp5;
+
+COMMIT ;
+
+INSERT INTO emp (eid, ename, salary, did) VALUES (106, 'SonuSonuSonuSonu', 50000, 10);
+
+
+drop table t1;
+
+create table t1 (c1 int);
+
+insert into t1 values (10);
+insert into t1 values(20);
+insert into t1 values(30);
+
+select * from t1;
+
+delete from t1 where c1 = 10;
+-- delete t1 where c1 = 20;
+
 
