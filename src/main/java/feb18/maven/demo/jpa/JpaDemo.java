@@ -9,21 +9,27 @@ public class JpaDemo {
 	public static void main(String[] args) {
 
 		System.out.println("Start");
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistenceUnitName");
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("vaman");
 		EntityManager em = factory.createEntityManager();
 
 //		Employee emp = new Employee(101, "Sonu", 50000);
-//		Employee emp = new Employee(102, "Monu", 60000);
-		Employee emp = new Employee(103, "Tonu", 55000);
+		Employee emp2 = new Employee(102, "Monu", 60000);
+//		Employee emp3 = new Employee(103, "Tonu", 55000);
 
 		em.getTransaction().begin();
 
-		em.persist(emp); // insert
-//		em.merge(emp); // update
+//		em.persist(emp); // insert
+//		em.persist(emp2); // insert
+//		em.persist(emp3); // insert
+
+		emp2.setSalary(65000);
+
+		em.merge(emp2); // update
 //		em.remove(emp); // delete
-		Employee emp2 = em.find(Employee.class, 101); // select
+		Employee empData = em.find(Employee.class, 102); // select
 		em.getTransaction().commit();
-		System.out.println(emp2.toString());
+//		em.getTransaction().rollback();
+		System.out.println(empData.toString());
 		System.out.println("End");
 	}
 }

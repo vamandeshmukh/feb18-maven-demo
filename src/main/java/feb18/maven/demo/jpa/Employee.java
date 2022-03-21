@@ -2,6 +2,8 @@ package feb18.maven.demo.jpa;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,18 +11,27 @@ import javax.persistence.Table;
 @Table(name = "emp_table")
 public class Employee {
 
-	@Id // primary key
+	@Id // primary key 101, 102, ...
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "employee_id")
 	private int eid;
 
-	@Column(name = "first_name")
-	private String firstName;
+	@Column(name = "first_name") // SQL - first_name
+	private String firstName; // Java - firstName
 
 	@Column(name = "salary")
 	private double salary;
+	
+//	private Status status; // enum employeed, separated, retired, died 
 
 	public Employee() {
 		super();
+	}
+
+	public Employee(String firstName, double salary) {
+		super();
+		this.firstName = firstName;
+		this.salary = salary;
 	}
 
 	public Employee(int eid, String firstName, double salary) {
