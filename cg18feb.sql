@@ -190,4 +190,13 @@ select * from t1;
 delete from t1 where c1 = 10;
 -- delete t1 where c1 = 20;
 
+commit; 
 
+CREATE TABLE emp_table(
+	eid INT CONSTRAINT emp_table_pk PRIMARY KEY, 
+	firstName VARCHAR(10), 
+	salary DECIMAL);
+
+select * from emp_table;
+
+drop table emp_table;
