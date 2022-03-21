@@ -29,7 +29,7 @@ public class JpaDemo {
 		Employee empData = em.find(Employee.class, 102); // select
 		em.getTransaction().commit();
 //		em.getTransaction().rollback();
-		System.out.println(empData.toString());
+		System.out.println(empData.toString()); 
 		System.out.println("End");
 	}
 }
