@@ -13,7 +13,8 @@ public class JpaDemo {
 		EntityManager em = factory.createEntityManager();
 
 //		Employee emp = new Employee(101, "Sonu", 50000);
-		Employee emp = new Employee(102, "Monu", 60000);
+//		Employee emp = new Employee(102, "Monu", 60000);
+		Employee emp = new Employee(103, "Tonu", 55000);
 
 		em.getTransaction().begin();
 

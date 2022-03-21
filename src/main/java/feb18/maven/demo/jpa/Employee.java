@@ -4,8 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "emp_table")
+//@Entity
+//@Table(name = "emp_table")
 public class Employee {
 
 
