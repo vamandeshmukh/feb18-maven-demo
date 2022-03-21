@@ -1,4 +1,4 @@
-package feb18.maven.demo.jpa;
+package feb18.maven.demo.jpa.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

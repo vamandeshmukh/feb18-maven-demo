@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import feb18.maven.demo.jpa.entity.Employee;
+
 public class JpaDemo {
 
 	public static void main(String[] args) {
