@@ -199,4 +199,9 @@ CREATE TABLE emp_table(
 
 select * from emp_table;
 
-drop table emp_table;
+commit; 
+
+select * from emp_table;
+
+-- drop table emp_table;
+
