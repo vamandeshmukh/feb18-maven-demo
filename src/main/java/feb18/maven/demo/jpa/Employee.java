@@ -1,17 +1,22 @@
 package feb18.maven.demo.jpa;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name = "emp_table")
+@Entity
+@Table(name = "emp_table")
 public class Employee {
 
-
-	@Id
+	@Id // primary key
+	@Column(name = "employee_id")
 	private int eid;
+
+	@Column(name = "first_name")
 	private String firstName;
+
+	@Column(name = "salary")
 	private double salary;
 
 	public Employee() {
