@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Source: https://gist.github.com/SergioDiniz/6ccd279db7cacac021ab01624fdf8278 -->
+
 <!DOCTYPE hibernate-configuration PUBLIC
 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
@@ -20,3 +23,5 @@
 
 	</session-factory>
 </hibernate-configuration>
+
+
