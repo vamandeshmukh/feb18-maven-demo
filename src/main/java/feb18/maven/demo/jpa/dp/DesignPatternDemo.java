@@ -2,6 +2,11 @@ package feb18.maven.demo.jpa.dp;
 
 // 
 
+// Design patterns 
+// Creational design patterns 
+// Structural design patterns 
+// Behavioural design patterns 
+
 class Employee {
 
 }
