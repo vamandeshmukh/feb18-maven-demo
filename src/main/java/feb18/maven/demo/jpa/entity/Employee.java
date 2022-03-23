@@ -1,8 +1,11 @@
 package feb18.maven.demo.jpa.entity;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +24,10 @@ public class Employee {
 	private double salary;
 
 //	private Status status; // enum employeed, separated, retired, died 
+
+//	@OneToOne 
+//	@OneToMany
+	private Department department;
 
 	public Employee() {
 		super();
